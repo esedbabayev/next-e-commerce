@@ -17,7 +17,7 @@ const MainHeader = () => {
     <div className='container max-w-[1240px] mx-auto py-6 flex items-center'>
      
      <div className='mr-4 hidden'>
-     <Image src={menu} width={24} height={24} alt='menu' className="hidden"></Image>
+     <Image src={menu} width={24} height={24} alt='menu' className="hidden"/>
      </div>
 
      <div>
@@ -28,7 +28,7 @@ const MainHeader = () => {
        <ul className='flex flex-row gap-4 items-center'>
          <li className='flex gap-1'>
            Shop
-           <Image src={arrowIcon} width={20} height={20} alt='arrowIcon'></Image>
+           <Image src={arrowIcon} width={20} height={20} alt='arrowIcon'/>
            </li>
          <li>On Sale</li>
          <li>New Arrivals</li>
