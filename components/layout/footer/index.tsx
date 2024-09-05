@@ -13,7 +13,6 @@ const Footer = () => {
       <BlankSection />
       <SubFooter />
       <FooterMain />
-  
     </footer>
   );
 };
