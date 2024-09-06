@@ -3,9 +3,11 @@ import React from "react";
 // Container
 import Container from "@/main-container";
 
+// Next Image
+import Image from "next/image";
+
 // Icons
 import Email from "@/assets/images/icons/Vector.png";
-import Image from "next/image";
 
 const SubFooter = () => {
   return (
