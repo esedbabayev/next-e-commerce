@@ -5,7 +5,7 @@ interface AuxProps {
 }
 
 const Container: React.FC<AuxProps> = ({ children }) => {
-  return <div className="w-full max-w-[1240px] mx-auto">{children}</div>;
+  return <div className=" mx-auto max-w-[1240px]">{children}</div>;
 };
 
 export default Container;

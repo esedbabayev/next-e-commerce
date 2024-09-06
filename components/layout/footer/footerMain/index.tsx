@@ -7,7 +7,7 @@ import React from 'react'
 const FooterMain = () => {
   return (
     <section className=' w-full bg-main'>
-sdaasd
+
     </section>
   )
 }

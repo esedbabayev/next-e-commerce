@@ -9,22 +9,22 @@ import blackSearch from "@/assets/images/icons/blackSearch.png"
 import bucket from "@/assets/images/icons/bucket.png"
 import profile from "@/assets/images/icons/profile.png"
 
+import Container from '@/components/layout/main-container'
+
 
 const MainHeader = () => {
   return (
-    <div>
+ 
+    <Container>
+    <div className='max-w-[1240px] mx-auto py-6 flex items-center justify-between px-4 gap-10'>
      
-    <div className='container max-w-[1240px] mx-auto py-6 flex items-center'>
-     
-     <div className='mr-4 hidden'>
-     <Image src={menu} width={24} height={24} alt='menu' className="hidden"/>
+     <div className='flex gap-3 items-center' >
+     <Image src={menu} width={24} height={24} alt='menu' className='visible lg:invisible'/>
+     <h1 className='text-[32px] font-bold '>SHOP.CO</h1>
      </div>
 
-     <div>
-       <h1 className='text-[32px] font-bold mr-10 '>SHOP.CO</h1>
-     </div>
-
-     <div >
+   
+     <div className='hidden lg:block' >
        <ul className='flex flex-row gap-4 items-center'>
          <li className='flex gap-1'>
            Shop
@@ -36,7 +36,7 @@ const MainHeader = () => {
        </ul>
      </div>
 
-     <div className='mx-10 bg-[#F0F0F0] py-3 px-4 rounded-[62px] w-[577px] flex gap-3'>
+     <div className='hidden md:flex mx-10 bg-[#F0F0F0] py-3 px-4 rounded-[62px] flex-grow flex gap-3'>
        <button>
        <Image src={graySearch} width={24} height={24} alt='graySearch' className="my-auto"></Image>
        </button>
@@ -48,9 +48,9 @@ const MainHeader = () => {
      </div>
 
 
-     <div className='flex gap-[14px]'>
+     <div className='flex gap-[14px] shrink-0'>
        <button>
-       <Image src={blackSearch} width={24} height={24} alt='blackSearch' className="hidden"></Image>
+       <Image src={blackSearch} width={24} height={24} alt='blackSearch' className="visible md:invisible"></Image>
        </button>
 
        <button>
@@ -67,8 +67,8 @@ const MainHeader = () => {
 
     </div>
 
-
-   </div>
+    </Container>
+ 
   )
 }
 
