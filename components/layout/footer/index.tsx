@@ -5,14 +5,14 @@ import BlankSection from "./blankSection";
 import SubFooter from "./subFooter";
 import FooterMain from "./footerMain";
 
-
-
 const Footer = () => {
   return (
     <footer className="">
       <BlankSection />
-      <SubFooter />
-      <FooterMain />
+      <div className="relative">
+        <SubFooter />
+        <FooterMain />
+      </div>
     </footer>
   );
 };
