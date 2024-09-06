@@ -1,15 +1,18 @@
-import React from 'react'
+import React from "react";
 
 // Container
-
-
+import Container from "@/components/main-container";
 
 const FooterMain = () => {
   return (
-    <section className=' w-full bg-main'>
-sdaasd
+    <section className="bg-main">
+      <Container>
+        <div>
+          
+        </div>
+      </Container>
     </section>
-  )
-}
+  );
+};
 
-export default FooterMain
+export default FooterMain;
