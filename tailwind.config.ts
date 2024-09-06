@@ -9,7 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        main: "#F0F0F0"
+        main: "#F0F0F0",
+      },
+      screens: {
+        desktop: "1440px",
+        mobile: "390px",
       },
     },
   },
