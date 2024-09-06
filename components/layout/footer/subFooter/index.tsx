@@ -1,7 +1,7 @@
 import React from "react";
 
 // Container
-import Container from "@/main-container";
+import Container from "@/components/main-container";
 
 // Next Image
 import Image from "next/image";
@@ -13,23 +13,25 @@ const SubFooter = () => {
   return (
     <section>
       <Container>
-        <div className="flex justify-between px-16 py-10 bg-black rounded-[20px]">
-          {/* left */}
+        <div className="flex flex-col px-6 pt-8 bg-black rounded-[20px]">
+          {/* text */}
           <div>
-            <p className="uppercase font-bold text-white text-4xl">
+            <p className="uppercase font-bold text-white text-[32px] leading-9">
               STAY UPTO DATE ABOUT OUR LATEST OFFERS
             </p>
           </div>
-          {/* right */}
+          {/* form */}
           <div>
-            {/* email */}
-            <div>
-              <Image src={Email} width={20} height={15} alt="emailIcon" />
-            </div>
-            {/* button */}
-            <div>
-              <button></button>
-            </div>
+            <form>
+              {/* email */}
+              <div>
+                <Image src={Email} width={20} height={15} alt="emailIcon" />
+              </div>
+              {/* button */}
+              <div>
+                <button></button>
+              </div>
+            </form>
           </div>
         </div>
       </Container>
