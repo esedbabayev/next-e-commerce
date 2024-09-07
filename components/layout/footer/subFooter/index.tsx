@@ -13,7 +13,7 @@ import Email from "@/assets/images/icons/Vector.png";
 
 const SubFooter = () => {
   return (
-    <section>
+    <section className="absolute bottom-[85%] md:bottom-[80%] w-full">
       <Container>
         <div className="flex flex-col md:flex-row md:justify-between md:items-center desktop:px-16 desktop:py-9 gap-8 px-6 pt-8 pb-7 bg-black rounded-[20px]">
           {/* text */}
