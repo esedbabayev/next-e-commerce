@@ -7,10 +7,12 @@ import FooterMain from "./footerMain";
 
 const Footer = () => {
   return (
-    <footer className="">
+    <footer className="mt-[120px]">
       <BlankSection />
       <div className="relative">
-        <SubFooter />
+        <div className="flex justify-center">
+          <SubFooter />
+        </div>
         <FooterMain />
       </div>
     </footer>
