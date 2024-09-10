@@ -9,7 +9,7 @@ import blackSearch from "@/assets/images/icons/blackSearch.png"
 import bucket from "@/assets/images/icons/bucket.png"
 import profile from "@/assets/images/icons/profile.png"
 
-import Container from '@/components/layout/main-container'
+import Container from '@/components/main-container'
 
 
 const MainHeader = () => {

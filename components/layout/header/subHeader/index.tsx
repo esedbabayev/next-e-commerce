@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import CloseIcon from "@/assets/images/icons/Frame.svg"
 
-import Container from '@/components/layout/main-container'
+import Container from '@/components/main-container'
 
 
 const SubHeader = () => {
