@@ -9,7 +9,7 @@ import blackSearch from "@/assets/images/icons/blackSearch.png"
 import bucket from "@/assets/images/icons/bucket.png"
 import profile from "@/assets/images/icons/profile.png"
 
-import Container from '@/components/layout/main-container'
+import Container from '@/components/main-container'
 
 
 const MainHeader = () => {
@@ -19,7 +19,7 @@ const MainHeader = () => {
     <div className='max-w-[1240px] mx-auto py-6 flex items-center justify-between px-4 gap-10'>
      
      <div className='flex gap-3 items-center' >
-     <Image src={menu} width={24} height={24} alt='menu' className='visible lg:invisible'/>
+     <Image src={menu} width={24} height={24} alt='menu' className='block lg:hidden'/>
      <h1 className='text-[32px] font-bold '>SHOP.CO</h1>
      </div>
 
