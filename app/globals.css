@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Variable.woff2') format('woff2'),
+         url('../fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Variable.woff') format('woff'),
+         url('../fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Variable.ttf') format('truetype');
+         font-weight: 300 900;
+         font-display: swap;
+         font-style: normal;
+}
+
+@font-face {
+    font-family: "Integral";
+    src: url(../fonts/Demo_Fonts/Fontspring-DEMO-integralcf-medium.otf);
+}
+
+body {
+    font-family: "Satoshi" !important;
+}

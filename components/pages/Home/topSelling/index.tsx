@@ -1,19 +1,15 @@
 import React from 'react'
-import "./style.css"
 
 import Container from '@/components/main-container'
+import NewProduct from '../newArrivals/newProduct'
 
-// Components
-import NewProduct from './newProduct'
-
-const NewArrivals = () => {
+const TopSelling = () => {
   return (
-
 <section>
     <Container>
     <div className='max-w-[1240px] mx-auto  flex flex-col items-center justify-center px-4'>
     <div className='flex items-center justify-center'>
-        <h1 className='text-[32px] font-bold mb-3 lg:mb-10'>NEW ARRIVALS</h1>
+        <h1 className='text-[32px] font-bold mb-3 lg:mb-10'>TOP SELLING</h1>
     </div>
      
      <div className='space-x-4 w-full whitespace-nowrap overflow-x-visible 
@@ -30,14 +26,11 @@ const NewArrivals = () => {
         <button className='text-[14px] font-medium '>View All</button>
       </div>
 
-      <hr className='border border-[#0000001A] w-full mb-10 lg:mb-16' />
-
     </div>
     </Container>
 
 </section>
-
   )
 }
 
-export default NewArrivals
+export default TopSelling
