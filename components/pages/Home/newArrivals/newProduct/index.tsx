@@ -14,7 +14,12 @@ interface IProps{
 
 const NewProduct = ({newArrival}:IProps) => {
 
-const discountPrice = (+newArrival?.price * newArrival?.discount)/100
+// const discountPrice = (+newArrival?.price * newArrival?.discount)/100
+
+const discountPrice = newArrival?.price && newArrival?.discount
+  ? (+newArrival.price * +newArrival.discount) / 100
+  : 0;
+
 
   return (
     <div className='inline-block'>

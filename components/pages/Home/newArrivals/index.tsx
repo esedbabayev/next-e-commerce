@@ -9,25 +9,10 @@ import NewProduct from './newProduct'
 import { IProduct } from '@/types/product'
 
 interface IProps{
+  title: string;
   arrivalProducts:IProduct[]
 }
-const NewArrivals = ({arrivalProducts}:IProps) => {
-
-// const [newArrivals, setNewArrivals] = useState([])
-
-// const getNewArrivals = async() => {
-
-//   const response = await fetch("http://localhost:5000/api/new-arrivals")
-//   const data = await response.json()
-//   setNewArrivals(data.products)
-
-//   console.log(data.products);
-  
-// }
-
-// useEffect(() => {
-//   getNewArrivals()
-// }, [])
+const NewArrivals:  React.FC<IProps> = ({arrivalProducts, title }) => {
 
 return (
 
@@ -35,7 +20,7 @@ return (
     <Container>
     <div className='max-w-[1240px] mx-auto  flex flex-col items-center justify-center px-4'>
     <div className='flex items-center justify-center'>
-        <h1 className='text-[32px] font-bold font-integral mb-3 lg:mb-10'>NEW ARRIVALS</h1>
+        <h1 className='text-[32px] font-bold font-integral mb-3 lg:mb-10'>{title}</h1>
     </div>
      
      <div className='space-x-4 w-full whitespace-nowrap overflow-x-visible 
