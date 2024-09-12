@@ -6,14 +6,22 @@ import tshirt from "@/assets/home/Frame 32.png"
 
 // Review
 import { Rate } from "antd";
+import { IProduct } from '@/types/product';
 
-const NewProduct = () => {
+interface IProps{
+  newArrival:IProduct
+}
+
+const NewProduct = ({newArrival}:IProps) => {
+
+const discountPrice = (+newArrival?.price * newArrival?.discount)/100
+
   return (
     <div className='inline-block'>
     <div className='mb-[10px]'>
         <Image src={tshirt} alt='t-shirt' width={200} height={200} className='md: w-[300px] md:h-[300px]' />
     </div>
-    <p className='text-[16px] font-bold lg:text-[20px]'>T-shirt with Tape Details</p>
+    <p className='text-[16px] font-bold lg:text-[20px]'>{newArrival?.title}</p>
     
     <div className='flex'>
     <div className='flex gap-1'>
@@ -23,10 +31,10 @@ const NewProduct = () => {
     </div>
 
     <div className='flex items-center gap-[5px]'>
-    <h3 className='text-[20px] font-bold lg:text-[24px]'>$120</h3>
-    <span className=' text-[#00000066] text-[20px] font-bold line-through'>$260</span>
-    <span className='text-[#FF3333] text-[10px] font-medium 
-    py-[6px] px-[14px] bg-[#FF33331A] rounded-lg my-auto'>-20%</span>
+    <h3 className='text-[20px] font-bold lg:text-[24px]'>${newArrival?.discount && discountPrice}</h3>
+    {newArrival?.discount && <span className=' text-[#00000066] text-[20px] font-bold line-through'>${newArrival?.price}</span>}
+    {newArrival?.discount && <span className='text-[#FF3333] text-[10px] font-medium 
+    py-[6px] px-[14px] bg-[#FF33331A] rounded-lg my-auto'>{newArrival?.discount}%</span>}
    </div>
   </div>
   )

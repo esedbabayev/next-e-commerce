@@ -2,13 +2,15 @@ import NewArrivals from '@/components/pages/Home/newArrivals'
 import TopSelling from '@/components/pages/Home/topSelling'
 import React from 'react'
 
+interface IProps{
+  arrivalProducts:IProduct[]
+}
 
-
-const HomeContainer = () => {
+const HomeContainer = ({arrivalProducts}:IProps) => {
   return (
  <main>
     
-<NewArrivals/>
+<NewArrivals arrivalProducts={arrivalProducts}/>
 <TopSelling/>
 
  </main>
