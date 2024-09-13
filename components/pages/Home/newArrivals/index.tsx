@@ -26,9 +26,8 @@ return (
      <div className='space-x-4 w-full whitespace-nowrap overflow-x-visible 
      overflow-y-hidden flex lg:overflow-x-hidden lg:grid grid-cols-4' >
       {
-        arrivalProducts&&arrivalProducts.map((newArrival) => {
+        arrivalProducts && arrivalProducts.map((newArrival) => {
           return <NewProduct newArrival={newArrival} />
-
         })
       }
 

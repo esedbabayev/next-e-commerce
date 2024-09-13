@@ -20,3 +20,5 @@ const HomeContainer = ({arrivalProducts}:IProps) => {
 }
 
 export default HomeContainer
+
+
