@@ -3,7 +3,9 @@ import React from 'react'
 
 // Components
 import NewArrivals from '@/components/pages/Home/newArrivals'
-import HomeShop from '@/components/pages/Home/homeShop';
+
+import ShopHome from "@/components/pages/Home/homeShop"
+
 
 import { IProduct } from '@/types/product'
 
@@ -15,8 +17,7 @@ interface IProps{
 const HomeContainer = ({arrivalProducts}:IProps) => {
   return (
  <main>
-  
-<HomeShop/>  
+ <ShopHome/> 
 <NewArrivals title= "NEW ARRIVALS" arrivalProducts={arrivalProducts}/>
 <NewArrivals title= "TOP SELLING" arrivalProducts={arrivalProducts}/>
 
