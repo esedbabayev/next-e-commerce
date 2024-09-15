@@ -5,6 +5,8 @@ import React from 'react'
 import NewArrivals from '@/components/pages/Home/newArrivals'
 
 import ShopHome from "@/components/pages/Home/homeShop"
+import CategoryHome from '@/components/pages/Home/homeCategory'
+import ReviewSection from '@/components/pages/Home/reviews'
 
 
 import { IProduct } from '@/types/product'
@@ -19,7 +21,11 @@ const HomeContainer = ({arrivalProducts}:IProps) => {
  <main>
  <ShopHome/> 
 <NewArrivals title= "NEW ARRIVALS" arrivalProducts={arrivalProducts}/>
+
 <NewArrivals title= "TOP SELLING" arrivalProducts={arrivalProducts}/>
+
+<CategoryHome/>
+<ReviewSection/>
 
  </main>
   )
