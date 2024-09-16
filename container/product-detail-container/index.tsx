@@ -1,8 +1,8 @@
 import React from 'react'
 
 // Components
-import ProductDetails from '@/components/pages/ProductDetailPage/productDetail'
-import Reviews from '@/components/pages/ProductDetailPage/reviews'
+import ProductDetails from '@/components/ProductDetailPage/productDetail'
+import Reviews from '@/components/ProductDetailPage/reviews'
 
 const ProductDetailContainer = () => {
   return (

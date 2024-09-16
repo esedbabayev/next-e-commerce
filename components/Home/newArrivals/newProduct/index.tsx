@@ -21,6 +21,7 @@ const NewProduct = ({ newArrival }: IProps) => {
 
 
   return (
+    
     <div className='inline-block'>
       <div className='mb-[10px]'>
         <img src={newArrival.coverImage} alt='t-shirt' width={200} height={200} className='md: w-[300px] md:h-[300px]' />
@@ -44,6 +45,7 @@ const NewProduct = ({ newArrival }: IProps) => {
 
       </div>
     </div>
+    
   )
 }
 
