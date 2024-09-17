@@ -7,7 +7,7 @@ import FooterMain from "./footerMain";
 
 const Footer = () => {
   return (
-    <footer className="mt-[120px]">
+    <footer className="mt-[220px] md:mt-[200px]">
       <BlankSection />
       <div className="relative">
         <div className="flex justify-center">

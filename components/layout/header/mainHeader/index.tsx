@@ -18,9 +18,9 @@ const MainHeader = () => {
     <Container>
     <div className='max-w-[1240px] mx-auto py-6 flex items-center justify-between px-4 gap-10'>
      
-     <div className='flex gap-3 items-center' >
-     <Image src={menu} width={24} height={24} alt='menu' className='visible lg:invisible'/>
-     <h1 className='text-[32px] font-bold '>SHOP.CO</h1>
+     <div className='flex gap-3 items-baseline' >
+     <Image src={menu} width={24} height={24} alt='menu' className='block lg:hidden '/>
+     <h1 className='text-[32px] font-bold font-integral'>SHOP.CO</h1>
      </div>
 
    
