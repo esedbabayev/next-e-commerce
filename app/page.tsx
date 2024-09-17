@@ -13,13 +13,12 @@ const sellerPromise= await getSellerProducts()
 const [arrivalProducts,sellerProducts ]= await Promise.all([arrivalPromise,sellerPromise])
 
 
-
 return <HomeContainer 
 arrivalProducts={arrivalProducts.products}
 sellerProducts = {sellerProducts.products}
 />
 
-
+ 
 };
 
 export default HomePage;

@@ -12,17 +12,19 @@ import ReviewSection from '@/components/Home/reviews'
 import { IProduct } from '@/types/product'
 
 interface IProps{
-  title: string;
-  arrivalProducts:IProduct[]
+  title?: string;
+  arrivalProducts:IProduct[],
+  sellerProducts:IProduct[],
 }
 
-const HomeContainer = ({arrivalProducts}:IProps) => {
+const HomeContainer = ({arrivalProducts, sellerProducts}:IProps) => {
   return (
  <main>
+
  <ShopHome/> 
 <NewArrivals title= "NEW ARRIVALS" arrivalProducts={arrivalProducts}/>
 
-<NewArrivals title= "TOP SELLING" arrivalProducts={arrivalProducts}/>
+<NewArrivals title= "TOP SELLING" arrivalProducts={sellerProducts}/>
 
 <CategoryHome/>
 <ReviewSection/>
