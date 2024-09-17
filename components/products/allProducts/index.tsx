@@ -21,20 +21,19 @@ const AllProducts = () => {
     <Container>
 
     <div className='max-w-[1240px] flex flex-col justify-between mx-auto px-4 '>
-    <div className='flex mb-7 '>
-
+    <div className='flex mb-7 lg:mb-2 '>
        
         <h1 className='text-[24px] font-bold lg:text-[32px] lg:mr-auto'>Casual</h1>
         <p className='text-[14px] text-[#00000099] mt-3 ml-2 mr-14 lg:text-[16px] lg:mr-3 lg:ml-0'>Showing 1-10 of 100 Products</p>
         
 
-        <button className='lg:flex lg:items-baseline'>
+        <button className='lg:flex lg:items-baseline hidden lg:block items-center justify-center '>
             <p className='lg:text-[16px] lg:mt-3 '>Sort by: Most Popular</p>
-            <Image src={down} alt={down} className ='w-4 h-4'></Image>
+            <Image src={down} alt={down} className ='w-4 h-4 lg:my-auto'></Image>
         </button>
 
-        <button>
-          <Image src = {filter} alt={filter} width={32} height={32}></Image>
+        <button className='block lg:hidden'>
+          <Image src = {filter} alt="filter" width={32} height={32} className='ml-3'></Image>
         </button>
     </div>
      

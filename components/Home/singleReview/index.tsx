@@ -7,7 +7,7 @@ import { Rate } from "antd";
 const SingleReview = () => {
   return (
     <div className='p-6 border border-[#0000001A] rounded-[20px] w-[358px]
-    lg: px-8 lg:py-7 lg:w-[400px] 
+    lg: px-8 lg:py-7 lg:w-[600px] 
     '>
 <div className='flex gap-1'>
     <Rate allowHalf defaultValue={4.5} style={{ fontSize: "16px", color: "#FFC633" }} />

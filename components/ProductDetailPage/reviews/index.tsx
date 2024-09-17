@@ -25,21 +25,27 @@ const Reviews = () => {
               <span className='text-[14px] font-normal text-[#00000099] ml-[6px]'>(451)</span>
             </h1>
 
-          <button>
+          <div className='ml-auto flex'>
+          <button >
             <Image src={filter} alt='filter' className='w-10 h-10 ml-14 mr-2'></Image>
           </button>
 
-          <div className='items-center gap-5 px-4 py-3 bg-[#F0F0F0] mr-[10px] rounded-[62px] lg:block hidden'>
+          <div className='items-center gap-5 px-4 py-3 bg-[#F0F0F0] mr-[10px] rounded-[62px] lg:block lg:flex hidden'>
           <button className='font-medium'>Latest</button>
           <Image src={downArrow} alt='downArrow' className='w-4 h-4'></Image>
           </div>
 
-          <div className='flex items-center px-4 py-3 bg-[#000000] rounded-[62px]'>
-          <button className='font-medium text-[12px] text-white'>Write a Review</button>
+          <div className='flex items-center px-4 py-3 bg-[#000000] rounded-[62px] '>
+          <button className='font-medium text-[12px] text-white lg:text-[16px]'>Write a Review</button>
           </div>
+          </div>
+
           </div>
           
-          <div className='flex flex-col gap-4'>
+          <div className='flex flex-col gap-4 lg:grid lg:grid-cols-2 lg:auto-rows-auto lg:gap-5'>
+          <SingleReview/>
+          <SingleReview/>
+          <SingleReview/>
           <SingleReview/>
           <SingleReview/>
           <SingleReview/>
