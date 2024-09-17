@@ -20,7 +20,7 @@ return (
     <Container>
     <div className='max-w-[1240px] mx-auto  flex flex-col items-center justify-center px-4 mt-[50px]'>
     <div className='flex items-center justify-center'>
-        <h1 className='text-[32px] font-bold font-integral mb-3 lg:mb-10'>{title}</h1>
+        <h1 className='text-[32px] text-center font-bold font-integral mb-3 lg:mb-10'>{title}</h1>
     </div>
      
      <div className='space-x-4 w-full whitespace-nowrap overflow-x-visible 
