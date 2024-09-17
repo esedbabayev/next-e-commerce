@@ -23,12 +23,12 @@ const ProductDetails = () => {
         <div className='px-4 flex flex-col lg:flex-row '>
 
         <div className='flex flex-col lg:flex-row lg: w-[80%]'>
-        <Image src={img1} alt={img1} className='lg:w-[444px] lg: h-[530px] lg:mt-4'></Image>
+        <Image src={img1} alt="img1" className='lg:w-[444px] lg: h-[530px] lg:mt-4'></Image>
 
         <div className='flex flex-row gap-3 mt-3 lg:flex-col lg:ml-3 lg:mr-3'>
-        <Image src={img1} alt={img1}  className='w-[111px] h-[106px] lg:w-[152px] lg:h-[168px]'></Image>
-        <Image src={img2} alt={img2}  className='w-[111px] h-[106px] lg:w-[152px] lg:h-[168px]'></Image>
-        <Image src={img3} alt={img3} className='w-[111px] h-[106px] lg:w-[152px] lg:h-[168px]'></Image>
+        <Image src={img1} alt="img1"  className='w-[111px] h-[106px] lg:w-[152px] lg:h-[168px]'></Image>
+        <Image src={img2} alt="img2" className='w-[111px] h-[106px] lg:w-[152px] lg:h-[168px]'></Image>
+        <Image src={img3} alt="img3" className='w-[111px] h-[106px] lg:w-[152px] lg:h-[168px]'></Image>
         </div>
         </div>
 
