@@ -25,7 +25,7 @@ import Link from "next/link";
 
 const FooterMain = () => {
   return (
-    <section className="bg-main pb-20">
+    <section className="bg-main pb-20 px-4">
       <Container>
         {/* holder of all */}
         <div>
@@ -36,7 +36,7 @@ const FooterMain = () => {
               <div className="flex flex-col mb-6 md:justify-center md:w-[35%]">
                 {/* logo */}
                 <div className="mb-[5px]">
-                  <h2 className="text-3xl font-bold">SHOP.CO</h2>
+                  <h2 className="text-3xl font-bold font-integral">SHOP.CO</h2>
                 </div>
                 {/* text */}
                 <div className="mb-5">

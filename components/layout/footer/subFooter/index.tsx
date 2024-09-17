@@ -13,12 +13,12 @@ import Email from "@/assets/images/icons/Vector.png";
 
 const SubFooter = () => {
   return (
-    <section className="absolute bottom-[85%] md:bottom-[80%] w-full">
+    <section className="absolute bottom-[85%] md:bottom-[80%] w-full px-4">
       <Container>
         <div className="flex flex-col md:flex-row md:justify-between md:items-center desktop:px-16 desktop:py-9 gap-8 px-6 pt-8 pb-7 bg-black rounded-[20px]">
           {/* text */}
           <div>
-            <p className="uppercase font-bold text-white text-[32px] leading-9 desktop:px-16 desktop:max-w-xl">
+            <p className="uppercase font-bold font-integral text-white text-[32px] leading-9 desktop:px-16 desktop:max-w-xl">
               STAY UPTO DATE ABOUT OUR LATEST OFFERS
             </p>
           </div>

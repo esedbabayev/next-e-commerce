@@ -15,6 +15,9 @@ const config: Config = {
         desktop: "1440px",
         mobile: "390px",
       },
+      fontFamily : {
+        integral: "Integral"
+      }
     },
   },
   plugins: [],
