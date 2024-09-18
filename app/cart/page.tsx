@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
 
-const page = () => {
+import Container from "@/components/main-container";
+
+import CartContainer from "@/container/cart-container";
+
+const CartPage = () => {
   return (
-    <div>page</div>
-  )
-}
+    <Container>
+      <CartContainer />
+    </Container>
+  );
+};
 
-export default page
+export default CartPage;
