@@ -10,9 +10,9 @@ import { IProduct } from '@/types/product'
 
 interface IProps{
   title: string;
-  arrivalProducts:IProduct[]
+  products:IProduct[],
 }
-const NewArrivals:  React.FC<IProps> = ({arrivalProducts, title }) => {
+const NewArrivals:  React.FC<IProps> = ({products, title }) => {
 
 return (
 
@@ -26,7 +26,7 @@ return (
      <div className='space-x-4 w-full whitespace-nowrap overflow-x-visible 
      overflow-y-hidden flex lg:overflow-x-hidden lg:grid grid-cols-4' >
       {
-        arrivalProducts && arrivalProducts.map((newArrival) => {
+        products && products.map((newArrival) => {
           return <NewProduct newArrival={newArrival} />
         })
       }
