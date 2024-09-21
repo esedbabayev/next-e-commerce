@@ -11,10 +11,11 @@ import Container from '@/components/main-container'
 import NewProduct from '@/components/Home/newArrivals/newProduct'
 
 
+
 import { Rate } from "antd";
 import tshirt from "@/assets/products/Frame 33.png"
 
-const AllProducts = () => {
+const AllProducts = ({allProducts}) => {
 
   return (
   <section>
@@ -40,9 +41,13 @@ const AllProducts = () => {
      <div className='space-x-4 w-full whitespace-nowrap 
      grid grid-cols-2 auto-rows-auto  lg:grid lg:grid-cols-3' >
   
+     {
+      allProducts && allProducts.map((newArrival) => (
+        <NewProduct newArrival={newArrival}/>
+      ))
+     }
 
-
-  <div className='inline-block'>
+  {/* <div className='inline-block'>
       <div className='mb-[10px]'>
         <Image src={tshirt} alt='t-shirt' width={200} height={200} className='md: w-[300px] md:h-[300px]' />
       </div>
@@ -59,51 +64,9 @@ const AllProducts = () => {
        <span className='text-[#FF3333] text-[10px] font-medium 
     py-[6px] px-[14px] bg-[#FF33331A] rounded-lg my-auto'>10%</span>
       </div>
-    </div>
+    </div> */}
 
 
-
-    <div className='inline-block'>
-      <div className='mb-[10px]'>
-        <Image src={tshirt} alt='t-shirt' width={200} height={200} className='md: w-[300px] md:h-[300px]' />
-      </div>
-      <p className='text-[16px] font-bold lg:text-[20px]'>T-shirt</p>
-      <div className='flex'>
-        <div className='flex gap-1'>
-          <Rate allowHalf defaultValue={4.5} style={{ fontSize: "16px", color: "#FFC633" }} />
-        </div>
-        <p className='text-[12px] font-normal ml-[11px] leading-4 md:text-[14px] md:ml-[13px] md:leading-5'>4.5/5</p>
-      </div>
-      <div className='flex items-center gap-[5px]'>
-        <h3 className='text-[20px] font-bold lg:text-[24px]'>$20.00</h3>
-        <span className=' text-[#00000066] text-[20px] font-bold line-through'>$59.00</span>
-       <span className='text-[#FF3333] text-[10px] font-medium 
-    py-[6px] px-[14px] bg-[#FF33331A] rounded-lg my-auto'>10%</span>
-      </div>
-    </div>
-
-
-
-
-
-    <div className='inline-block'>
-      <div className='mb-[10px]'>
-        <Image src={tshirt} alt='t-shirt' width={200} height={200} className='md: w-[300px] md:h-[300px]' />
-      </div>
-      <p className='text-[16px] font-bold lg:text-[20px]'>T-shirt</p>
-      <div className='flex'>
-        <div className='flex gap-1'>
-          <Rate allowHalf defaultValue={4.5} style={{ fontSize: "16px", color: "#FFC633" }} />
-        </div>
-        <p className='text-[12px] font-normal ml-[11px] leading-4 md:text-[14px] md:ml-[13px] md:leading-5'>4.5/5</p>
-      </div>
-      <div className='flex items-center gap-[5px]'>
-        <h3 className='text-[20px] font-bold lg:text-[24px]'>$20.00</h3>
-        <span className=' text-[#00000066] text-[20px] font-bold line-through'>$59.00</span>
-       <span className='text-[#FF3333] text-[10px] font-medium 
-    py-[6px] px-[14px] bg-[#FF33331A] rounded-lg my-auto'>10%</span>
-      </div>
-    </div>
 
       
    

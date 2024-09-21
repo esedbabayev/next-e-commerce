@@ -3,8 +3,13 @@ import React from 'react'
 import Image from 'next/image'
 import topArrow from "@/assets/products/topArrow.png"
 import SingleColor from '../color'
+import { getColors } from '@/api/products'
 
-const Colors = () => {
+const Colors = async() => {
+
+const colorsPromise = await getColors()
+const [allColors] = await Promise.all([colorsPromise])
+
   return (
     <div>
       <div className='flex justify-between items-baseline'>
@@ -14,15 +19,11 @@ const Colors = () => {
 
       <ul className='flex gap-4 flex-wrap' >
      
-    <SingleColor/>
-    <SingleColor/>
-    <SingleColor/>
-    <SingleColor/>
-    <SingleColor/>
-    <SingleColor/>
-    <SingleColor/>
-    <SingleColor/>
-    <SingleColor/>
+{
+  allColors && allColors.map((color) => (
+    <SingleColor key={color} color={color}/>
+  ))
+}
 
       </ul>
 

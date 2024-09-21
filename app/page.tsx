@@ -1,3 +1,4 @@
+"use client"
 import { getArrivalProducts } from "@/api/products";
 import {getSellerProducts} from "@/api/products"
 import HomeContainer from "@/container/home-container";

@@ -14,11 +14,12 @@ interface IProps {
 
 const NewProduct = ({ newArrival }: IProps) => {
   const discountPrice =
-    newArrival?.price &&
-    newArrival?.discount &&
-    (+newArrival.price * +newArrival.discount) / 100;
+  newArrival?.discount && newArrival?.price
+    ? (newArrival.price * newArrival.discount) / 100
+    : 0;
 
-  const discountedPrice = newArrival?.price - discountPrice;
+// If there is no discount, show the original price as the discounted price
+const discountedPrice = newArrival?.price - discountPrice || newArrival?.price;
 
   return (
     <div className="mb-[10px]  h-[500px]">
@@ -54,13 +55,13 @@ const NewProduct = ({ newArrival }: IProps) => {
           </h3>
         }
 
-        {discountPrice !== 0 && (
+        {discountPrice > 0 && (
           <span className=" text-[#00000066] text-[20px] font-bold line-through">
             ${newArrival?.price}
           </span>
         )}
 
-        {discountPrice !== 0 && (
+        {discountPrice > 0 && (
           <span
             className="text-[#FF3333] text-[10px] font-medium 
     py-[6px] px-[14px] bg-[#FF33331A] rounded-lg my-auto"

@@ -9,8 +9,9 @@ import { IProduct } from "@/types/product";
 interface IProps {
   title: string;
   products: IProduct[];
+  viewAllLink?: string;
 }
-const NewArrivals: React.FC<IProps> = ({ products, title }) => {
+const NewArrivals = ({ products, title, viewAllLink = "/" }: IProps) => {
   return (
     <section>
       <Container>
@@ -30,7 +31,7 @@ const NewArrivals: React.FC<IProps> = ({ products, title }) => {
               })}
           </div>
           <div className="py-4 px-13 mt-6 mb-10 border border-[#0000001A] rounded-full flex justify-center w-full lg:w-[17%] lg:mb-16">
-          <Link href="/new-arrivals-all">
+          <Link href={viewAllLink}>
             <button className="text-[14px] font-medium ">View All</button>
           </Link>
           </div>

@@ -22,9 +22,9 @@ const HomeContainer = ({arrivalProducts, sellerProducts}:IProps) => {
  <main>
 
  <ShopHome/> 
-<NewArrivals title= "NEW ARRIVALS" products={arrivalProducts}/>
+<NewArrivals title= "NEW ARRIVALS" viewAllLink="/new-arrivals-all"  products={arrivalProducts} />
 
-<NewArrivals title= "TOP SELLING" products={sellerProducts}/>
+<NewArrivals title= "TOP SELLING" viewAllLink="/top-sellers-all"  products={sellerProducts}/>
 
 <CategoryHome/>
 <ReviewSection/>
