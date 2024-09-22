@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react'
 
 import Container from '@/components/main-container'
 import Categories from '../categories'
@@ -10,9 +9,6 @@ import Button from '../button'
 
 
 const Filtering = () => {
-
-
-
 
   return (
    <Container>
