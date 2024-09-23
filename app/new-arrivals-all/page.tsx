@@ -1,21 +1,23 @@
-import React from 'react'
-import Container from '@/components/main-container'
-import AllNewArrivalsContainer from '@/container/all-new-arrivals'
-import { getArrivalProductsAll } from '@/api/products'
+import React from "react";
+import Container from "@/components/main-container";
+import {
+  getArrivalProducts,
+  getArrivalProductsAll,
+  getSellerProducts,
+} from "@/api/products";
+import AllNewArrivalsContainer from "@/container/all-new-arrivals";
 
+const AllNewArrivalsPage = async () => {
+  const allArrivalPromise = await getArrivalProductsAll();
 
-const AllNewArrivalsPage = async() => {
-
-    const allArrivalPromise= await getArrivalProductsAll()
-    console.log(allArrivalPromise);
-    
-    const [arrivalProducts]= await Promise.all([allArrivalPromise])
+  const [arrivalProducts] = await Promise.all([allArrivalPromise]);
+  
 
   return (
     <Container>
-        <AllNewArrivalsContainer arrivalProducts={arrivalProducts}/>
+      <AllNewArrivalsContainer arrivalProducts={arrivalProducts} />
     </Container>
-  )
-}
+  );
+};
 
-export default AllNewArrivalsPage
+export default AllNewArrivalsPage;

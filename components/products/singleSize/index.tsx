@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SingleSize = ({size}) => {
+const SingleSize = ({size}:any) => {
   return (
     <div>
       <li>

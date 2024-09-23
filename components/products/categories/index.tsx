@@ -26,7 +26,7 @@ const [allCategories] = await Promise.all([categoriesPromise])
 
      <ul className='space-y-4' >
   {
-    allCategories&& allCategories.map((category) => (
+    allCategories&& allCategories.map((category:any) => (
       <SingleCategory 
       category={category} 
       key={category}
