@@ -1,23 +1,16 @@
-"use client"
+import React from "react";
 
-import React from 'react'
+import ProductsContainer from "@/container/products-container";
+import { getAllProducts } from "@/api/products";
 
-import ProductsContainer from '@/container/products-container'
-import { getAllProducts } from '@/api/products'
+const ProductsPage = async ({ searchParams }: any) => {
+  console.log(searchParams, searchParams);
 
+  const productsPromise = await getAllProducts(searchParams);
 
-const ProductsPage = async() => {  
+  const [allProducts] = await Promise.all([productsPromise]);
 
-const productsPromise= await getAllProducts()
+  return <ProductsContainer allProducts={allProducts.products} />;
+};
 
-
-const [allProducts ]= await Promise.all([productsPromise ])
-
-
-
-  return (
-    <ProductsContainer allProducts={allProducts.products} />
-  )
-}
-
-export default ProductsPage
+export default ProductsPage;

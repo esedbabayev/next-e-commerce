@@ -1,17 +1,15 @@
-import { getSellerProductsAll } from '@/api/products'
-import AllTopSellingProductsContainer from '@/container/all-top-selling-products'
-import React from 'react'
+import { getSellerProductsAll } from "@/api/products";
+import AllTopSellingProductsContainer from "@/container/all-top-selling-products";
+import React from "react";
 
-const AllTopSellingProductsPage = async() => {
-
-
-    const allTopSellerPromise= await getSellerProductsAll()
-    const [topSellerProducts]= await Promise.all([allTopSellerPromise])
-
+const AllTopSellingProductsPage = async () => {
+  const allTopSellerPromise = await getSellerProductsAll();
+  const [topSellerProducts] = await Promise.all([allTopSellerPromise]);
+  console.log(topSellerProducts, "sadfgj");
 
   return (
     <AllTopSellingProductsContainer topSellerProducts={topSellerProducts}/>
-  )
-}
+  );
+};
 
-export default AllTopSellingProductsPage
+export default AllTopSellingProductsPage;
