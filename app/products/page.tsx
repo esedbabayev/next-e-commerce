@@ -4,8 +4,6 @@ import ProductsContainer from "@/container/products-container";
 import { getAllProducts } from "@/api/products";
 
 const ProductsPage = async ({ searchParams }: any) => {
-  console.log(searchParams, searchParams);
-
   const productsPromise = await getAllProducts(searchParams);
 
   const [allProducts] = await Promise.all([productsPromise]);
