@@ -7,6 +7,8 @@ import { getArrivalProductsAll } from '@/api/products'
 const AllNewArrivalsPage = async() => {
 
     const allArrivalPromise= await getArrivalProductsAll()
+    console.log(allArrivalPromise);
+    
     const [arrivalProducts]= await Promise.all([allArrivalPromise])
 
   return (

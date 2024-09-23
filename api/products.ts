@@ -10,6 +10,7 @@ export const getArrivalProducts = async () => {
 export const getArrivalProductsAll = async () => {
   const resp = await fetch("http://localhost:5000/api/new-arrivals")
  const data = await resp.json()
+ console.log(data.products);
  
  return data.products
 }

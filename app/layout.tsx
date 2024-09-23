@@ -6,7 +6,6 @@
 import "./globals.css";
 
 import { Provider } from "react-redux";
-import store from "../store";
 
 import Header from "@/components/layout/header";
 
@@ -28,11 +27,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body >
-      <Provider store={store}>
         <Header />
         {children}
       <Footer />
-      </Provider>
       </body>
     </html>
   );
