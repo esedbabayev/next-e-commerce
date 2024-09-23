@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 
 // Container
@@ -25,9 +23,7 @@ const SubFooter = () => {
           {/* form */}
           <div>
             <form
-              onSubmit={(event) => {
-                event.preventDefault();
-              }}
+              
               className="flex flex-col gap-3"
             >
               {/* email */}

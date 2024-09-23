@@ -5,11 +5,17 @@ import topArrow from "@/assets/products/topArrow.png"
 import SingleSize from '../singleSize'
 import { getSizes } from '@/api/products'
 
+interface ISizes {
+  size: String,
+  id: String
+}
+
 const Sizes = async() => {
 
   const sizesPromise = await getSizes()
   const [allsizes] = await Promise.all([sizesPromise])
   
+  console.log(allsizes);
   
   return (
     <div>
@@ -21,8 +27,8 @@ const Sizes = async() => {
       <ul className='flex gap-2 flex-wrap' >
  
          {
-          allsizes && allsizes.map((size) => (
-            <SingleSize key={size} size={size}/>
+          allsizes && allsizes.map((size:ISizes, index:Number) => (
+            <SingleSize key={index} size={size}/>
           ))
          }
 
