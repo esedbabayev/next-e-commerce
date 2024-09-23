@@ -1,3 +1,4 @@
+"use client"
 import { getArrivalProducts } from "@/api/products";
 import {getSellerProducts} from "@/api/products"
 import HomeContainer from "@/container/home-container";
@@ -13,13 +14,12 @@ const sellerPromise= await getSellerProducts()
 const [arrivalProducts,sellerProducts ]= await Promise.all([arrivalPromise,sellerPromise])
 
 
-
 return <HomeContainer 
 arrivalProducts={arrivalProducts.products}
 sellerProducts = {sellerProducts.products}
 />
 
-
+ 
 };
 
 export default HomePage;

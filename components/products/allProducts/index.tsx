@@ -11,39 +11,43 @@ import Container from '@/components/main-container'
 import NewProduct from '@/components/Home/newArrivals/newProduct'
 
 
+
 import { Rate } from "antd";
 import tshirt from "@/assets/products/Frame 33.png"
 
-const AllProducts = () => {
+const AllProducts = ({allProducts}) => {
 
   return (
   <section>
     <Container>
 
     <div className='max-w-[1240px] flex flex-col justify-between mx-auto px-4 '>
-    <div className='flex mb-7 '>
-
+    <div className='flex mb-7 lg:mb-2 '>
        
         <h1 className='text-[24px] font-bold lg:text-[32px] lg:mr-auto'>Casual</h1>
         <p className='text-[14px] text-[#00000099] mt-3 ml-2 mr-14 lg:text-[16px] lg:mr-3 lg:ml-0'>Showing 1-10 of 100 Products</p>
         
 
-        <button className='lg:flex lg:items-baseline'>
+        <button className='lg:flex lg:items-baseline hidden lg:block items-center justify-center '>
             <p className='lg:text-[16px] lg:mt-3 '>Sort by: Most Popular</p>
-            <Image src={down} alt={down} className ='w-4 h-4'></Image>
+            <Image src={down} alt={down} className ='w-4 h-4 lg:my-auto'></Image>
         </button>
 
-        <button>
-          <Image src = {filter} alt={filter} width={32} height={32}></Image>
+        <button className='block lg:hidden'>
+          <Image src = {filter} alt="filter" width={32} height={32} className='ml-3'></Image>
         </button>
     </div>
      
      <div className='space-x-4 w-full whitespace-nowrap 
      grid grid-cols-2 auto-rows-auto  lg:grid lg:grid-cols-3' >
   
+     {
+      allProducts && allProducts.map((newArrival) => (
+        <NewProduct newArrival={newArrival}/>
+      ))
+     }
 
-
-  <div className='inline-block'>
+  {/* <div className='inline-block'>
       <div className='mb-[10px]'>
         <Image src={tshirt} alt='t-shirt' width={200} height={200} className='md: w-[300px] md:h-[300px]' />
       </div>
@@ -60,51 +64,9 @@ const AllProducts = () => {
        <span className='text-[#FF3333] text-[10px] font-medium 
     py-[6px] px-[14px] bg-[#FF33331A] rounded-lg my-auto'>10%</span>
       </div>
-    </div>
+    </div> */}
 
 
-
-    <div className='inline-block'>
-      <div className='mb-[10px]'>
-        <Image src={tshirt} alt='t-shirt' width={200} height={200} className='md: w-[300px] md:h-[300px]' />
-      </div>
-      <p className='text-[16px] font-bold lg:text-[20px]'>T-shirt</p>
-      <div className='flex'>
-        <div className='flex gap-1'>
-          <Rate allowHalf defaultValue={4.5} style={{ fontSize: "16px", color: "#FFC633" }} />
-        </div>
-        <p className='text-[12px] font-normal ml-[11px] leading-4 md:text-[14px] md:ml-[13px] md:leading-5'>4.5/5</p>
-      </div>
-      <div className='flex items-center gap-[5px]'>
-        <h3 className='text-[20px] font-bold lg:text-[24px]'>$20.00</h3>
-        <span className=' text-[#00000066] text-[20px] font-bold line-through'>$59.00</span>
-       <span className='text-[#FF3333] text-[10px] font-medium 
-    py-[6px] px-[14px] bg-[#FF33331A] rounded-lg my-auto'>10%</span>
-      </div>
-    </div>
-
-
-
-
-
-    <div className='inline-block'>
-      <div className='mb-[10px]'>
-        <Image src={tshirt} alt='t-shirt' width={200} height={200} className='md: w-[300px] md:h-[300px]' />
-      </div>
-      <p className='text-[16px] font-bold lg:text-[20px]'>T-shirt</p>
-      <div className='flex'>
-        <div className='flex gap-1'>
-          <Rate allowHalf defaultValue={4.5} style={{ fontSize: "16px", color: "#FFC633" }} />
-        </div>
-        <p className='text-[12px] font-normal ml-[11px] leading-4 md:text-[14px] md:ml-[13px] md:leading-5'>4.5/5</p>
-      </div>
-      <div className='flex items-center gap-[5px]'>
-        <h3 className='text-[20px] font-bold lg:text-[24px]'>$20.00</h3>
-        <span className=' text-[#00000066] text-[20px] font-bold line-through'>$59.00</span>
-       <span className='text-[#FF3333] text-[10px] font-medium 
-    py-[6px] px-[14px] bg-[#FF33331A] rounded-lg my-auto'>10%</span>
-      </div>
-    </div>
 
       
    

@@ -10,6 +10,7 @@ import bucket from "@/assets/images/icons/bucket.png"
 import profile from "@/assets/images/icons/profile.png"
 
 import Container from '@/components/main-container'
+import Link from 'next/link'
 
 
 const MainHeader = () => {
@@ -58,7 +59,7 @@ const MainHeader = () => {
        </button>
 
        <button>
-       <Image src={profile} width={24} height={24} alt='profile'></Image>
+       <Link href="/sign-in"><Image src={profile} width={24} height={24} alt='profile'></Image></Link>
        </button>
 
 

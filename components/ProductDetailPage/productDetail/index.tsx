@@ -20,22 +20,22 @@ const ProductDetails = () => {
     <section>
       <Container>
 
-        <div className='px-4 flex flex-col lg:flex-row '>
+        <div className='px-4 flex flex-col lg:flex-row items-center'>
 
-        <div className='flex flex-col lg:flex-row lg: w-[80%]'>
-        <Image src={img1} alt="img1" className='lg:w-[444px] lg: h-[530px] lg:mt-4'></Image>
+        <div className='flex flex-col lg:flex-row-reverse lg:w-[90%]'>
+        <Image src={img1} alt="img1" className='w-[358px] h-[290px] lg:w-[400px] lg:h-[530px] lg:mt-4 lg:mr-10 object-cover rounded-lg lg:rounded-none'></Image>
 
-        <div className='flex flex-row gap-3 mt-3 lg:flex-col lg:ml-3 lg:mr-3'>
-        <Image src={img1} alt="img1"  className='w-[111px] h-[106px] lg:w-[152px] lg:h-[168px]'></Image>
-        <Image src={img2} alt="img2" className='w-[111px] h-[106px] lg:w-[152px] lg:h-[168px]'></Image>
-        <Image src={img3} alt="img3" className='w-[111px] h-[106px] lg:w-[152px] lg:h-[168px]'></Image>
+        <div className='flex flex-row gap-3 mt-3 lg:flex-col lg:ml-3 lg:mr-3 '>
+        <Image src={img1} alt="img1"  className='w-[111px] h-[106px] lg:w-[152px] lg:h-[168px] object-cover rounded-lg '></Image>
+        <Image src={img2} alt="img2" className='w-[111px] h-[106px] lg:w-[152px] lg:h-[168px] object-cover rounded-lg '></Image>
+        <Image src={img3} alt="img3" className='w-[111px] h-[106px] lg:w-[152px] lg:h-[168px] object-cover rounded-lg '></Image>
         </div>
         </div>
 
 
-<div>
+<div className='lg:flex lg:flex-col lg:mt-6' >
 
-  <h1 className='text-[24px] font-bold lg:text-[40px] font-integral w-[267px] leading-[28px] lg:w-[600px]'>One Life Graphic T-shirt</h1>
+  <h1 className='text-[24px] font-bold lg:text-[40px] font-integral w-[267px] leading-[28px] lg:w-[600px] mt-6 mb-4'>One Life Graphic T-shirt</h1>
 
 <div className='flex mt-3'>
   <div className='flex gap-1'>
@@ -44,7 +44,7 @@ const ProductDetails = () => {
   <p className='text-[12px] font-normal ml-[11px] leading-4 md:text-[14px] md:ml-[13px] md:leading-5'>4.5/5</p>
 </div>
 
-<div className='flex items-center gap-[5px] mt-3 mb-5'>
+<div className='flex items-center gap-[5px] mt-3 mb-3'>
   { <h3 className='text-[24px] font-bold lg:text-[32px]'>$260</h3>}
 
   <span className=' text-[#00000066] text-[24px] font-bold line-through lg:text-[32px]'>$300</span>
@@ -56,12 +56,12 @@ py-[6px] px-[14px] bg-[#FF33331A] rounded-lg my-auto lg:text-[16px]'>-40%</span>
 
 <h2 className='text-[14px] font-normal text-[#00000099] lg:text-[16px]'>This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.</h2>
 
-<hr className='mt-4 mb-5' />
+<hr className='mt-2 mb-3 lg:mt-3' />
 
 {/* Select Colors */}
 <div>
   <h4 className='text-[14px] font-normal text-[#00000099] lg:text-[16px]'>Select Colors</h4>
-  <div className='flex gap-3 mt-2 lg:mt-4'>
+  <div className='flex gap-3 lg:mt-4'>
    <SingleColor/>
    <SingleColor/>
    <SingleColor/>
@@ -69,7 +69,7 @@ py-[6px] px-[14px] bg-[#FF33331A] rounded-lg my-auto lg:text-[16px]'>-40%</span>
 </div>
 
 
-<hr className='mt-4 mb-5 lg:mt-6' />
+<hr className='mt-2 mb-3 lg:mt-3' />
 
 {/* Choose Size */}
 <div>
@@ -82,7 +82,7 @@ py-[6px] px-[14px] bg-[#FF33331A] rounded-lg my-auto lg:text-[16px]'>-40%</span>
   </ul>
 </div>
 
-<hr className='mt-4 mb-5 lg:mt-6' />
+<hr className='mt-2 mb-3 lg:mt-3' />
 
 {/* Counter/ Add To cart button */}
 <div>
@@ -97,7 +97,7 @@ py-[6px] px-[14px] bg-[#FF33331A] rounded-lg my-auto lg:text-[16px]'>-40%</span>
           type="number"
           min="1"
           max="100"
-          className=" text-[14px] bg-[#F0F0F0] text-center font-medium outline-none border-none w-full ml-3"
+          className=" text-[14px] bg-[#F0F0F0] text-center font-medium outline-none border-none w-full ml-3 "
           />
         <button  className="text-2xl text-[#000000]">+</button>     
       </div>

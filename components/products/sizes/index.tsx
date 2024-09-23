@@ -3,8 +3,14 @@ import React from 'react'
 import Image from 'next/image'
 import topArrow from "@/assets/products/topArrow.png"
 import SingleSize from '../singleSize'
+import { getSizes } from '@/api/products'
 
-const Sizes = () => {
+const Sizes = async() => {
+
+  const sizesPromise = await getSizes()
+  const [allsizes] = await Promise.all([sizesPromise])
+  
+  
   return (
     <div>
      <div className='flex justify-between items-baseline'>
@@ -14,15 +20,11 @@ const Sizes = () => {
 
       <ul className='flex gap-2 flex-wrap' >
  
-     <SingleSize/>
-     <SingleSize/>
-     <SingleSize/>
-     <SingleSize/>
-     <SingleSize/>
-     <SingleSize/>
-     <SingleSize/>
-     <SingleSize/>
-     <SingleSize/>
+         {
+          allsizes && allsizes.map((size) => (
+            <SingleSize key={size} size={size}/>
+          ))
+         }
 
        </ul>
        <hr className='my-5' />
