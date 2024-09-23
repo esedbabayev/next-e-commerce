@@ -9,8 +9,6 @@ const SingleSize = ({size}:any) => {
        font-normal text-[##00000099] hover:bg-[#000000] hover:text-white'>{size.name}</button>
 
       </li>
-
-
     </div>
   )
 }

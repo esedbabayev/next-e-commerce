@@ -6,7 +6,7 @@ import AllProducts from '@/components/products/allProducts'
 
 
 
-const ProductsContainer = ({allProducts}) => {
+const ProductsContainer = ({allProducts}:any) => {
   return (
      <Container>
     <main className='lg:flex lg:flex-row '>

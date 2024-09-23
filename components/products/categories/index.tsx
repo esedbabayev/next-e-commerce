@@ -10,7 +10,6 @@ import { getCategories } from '@/api/products'
 
 const Categories = async() => {
 
-
 const categoriesPromise = await getCategories()
 const [allCategories] = await Promise.all([categoriesPromise])
 

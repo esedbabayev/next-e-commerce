@@ -52,7 +52,7 @@ export const getColors = async () => {
 };
 
 export const getAllProducts = async (searchParams?: any) => {
-  console.log(searchParams, "dsfghsdaffg");
+  console.log(searchParams, "dsfghsdaffg");  
   const productsResp = await fetch(
     `http://localhost:5000/api/products${
       searchParams.category ? "?category=" + searchParams.category : ""
