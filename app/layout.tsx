@@ -3,8 +3,6 @@
 
 import "./globals.css";
 
-import { Provider } from "react-redux";
-
 import Header from "@/components/layout/header";
 
 // const inter = Inter({ subsets: ["latin"] });

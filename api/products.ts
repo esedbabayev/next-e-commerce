@@ -51,12 +51,29 @@ export const getColors = async () => {
   return colorsData;
 };
 
-export const getAllProducts = async (searchParams?: any) => {
-  console.log(searchParams, "dsfghsdaffg");  
+const filterHandler = (searchParams: any) => {
+  const params = new URLSearchParams();
+
+  if (searchParams.category) {
+    params.set("category", searchParams.category);
+  }
+  if (searchParams.color) {
+    params.set("color", searchParams.color);
+  }
+  if (searchParams.size) {
+    params.set("size", searchParams.size);
+  }
+
+  if (searchParams.price) {
+    params.set("price", searchParams.brand);
+  }
+
+  return params.toString();
+};
+
+export const getAllProducts = async (searchParams: any) => {
   const productsResp = await fetch(
-    `http://localhost:5000/api/products${
-      searchParams.category ? "?category=" + searchParams.category : ""
-    }`
+    `http://localhost:5000/api/products?${filterHandler(searchParams)}`
   );
   const productsData = await productsResp.json();
 
