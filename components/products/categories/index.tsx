@@ -1,13 +1,19 @@
+
 import Image from "next/image";
 import close from "@/assets/products/close.png";
-
 import SingleCategory from "../singleCategory";
-import { getCategories } from "@/api/products";
 
-const Categories = async () => {
-  const categoriesPromise = await getCategories();
-  const [allCategories] = await Promise.all([categoriesPromise]);
 
+// import { getCategories } from "@/api/products";
+
+
+
+const Categories =  ({categories, goToRoute}:any) => {
+  // const categoriesPromise = await getCategories();
+  // const [allCategories] = await Promise.all([categoriesPromise]);
+
+
+  
   return (
     <div>
       <div className="flex justify-between">
@@ -17,10 +23,12 @@ const Categories = async () => {
       <hr className="mt-4 mb-5" />
 
       <ul className="space-y-4">
-        {allCategories &&
-          allCategories.map((category: any) => (
-            <SingleCategory category={category} key={category} />
-          ))}
+        {
+          categories && categories.map((item) => (
+            <SingleCategory key={item.id} item={item} goToRoute={goToRoute}/>
+          ))
+        }
+
       </ul>
 
       <hr className="mt-6 mb-5" />

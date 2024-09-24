@@ -30,52 +30,100 @@ export const getSellerProductsAll = async () => {
   return sellerData.products;
 };
 
-export const getCategories = async () => {
-  const categoriesResp = await fetch("http://localhost:5000/api/categories");
-  const categoriesData = await categoriesResp.json();
+// Filtering Functions
 
-  return categoriesData;
+
+
+
+
+// export const getCategories = async () => {
+//   const categoriesResp = await fetch("http://localhost:5000/api/categories");
+//   const categoriesData = await categoriesResp.json();
+
+//   return categoriesData;
+// };
+
+// export const getSizes = async () => {
+//   const sizesResp = await fetch("http://localhost:5000/api/sizes");
+//   const sizesData = await sizesResp.json();
+
+//   return sizesData;
+// };
+
+// export const getColors = async () => {
+//   const colorsResp = await fetch("http://localhost:5000/api/colors");
+//   const colorsData = await colorsResp.json();
+
+//   return colorsData;
+// };
+
+// const filterHandler = (searchParams: any) => {
+//   const params = new URLSearchParams();
+
+//   if (searchParams.category) {
+//     params.set("category", searchParams.category);
+//   }
+//   if (searchParams.color) {
+//     params.set("color", searchParams.color);
+//   }
+//   if (searchParams.size) {
+//     params.set("size", searchParams.size);
+//   }
+
+//   if (searchParams.price) {
+//     params.set("price", searchParams.brand);
+//   }
+
+//   return params.toString();
+// };
+
+
+
+
+// export const getAllProducts = async (searchParams: any) => {
+//   const productsResp = await fetch(
+//     `http://localhost:5000/api/products?${filterHandler(searchParams)}`
+//   );
+//   const productsData = await productsResp.json();
+
+//   return productsData;
+// };
+
+export const getAllCategory = async () => {
+  const response = await fetch("http://localhost:5000/api/categories");
+  const data = await response.json();
+  return data;
 };
 
-export const getSizes = async () => {
-  const sizesResp = await fetch("http://localhost:5000/api/sizes");
-  const sizesData = await sizesResp.json();
-
-  return sizesData;
+export const getAllColors = async () => {
+  const response = await fetch("http://localhost:5000/api/colors");
+  const data = await response.json();
+  return data;
 };
-
-export const getColors = async () => {
-  const colorsResp = await fetch("http://localhost:5000/api/colors");
-  const colorsData = await colorsResp.json();
-
-  return colorsData;
+export const getAllSizes = async () => {
+  const response = await fetch("http://localhost:5000/api/sizes");
+  const data = await response.json();
+  return data;
 };
-
-const filterHandler = (searchParams: any) => {
+export const getAllProducts = async (searchParams: any) => {
   const params = new URLSearchParams();
+  console.log(searchParams, "ssearchParams");
 
   if (searchParams.category) {
     params.set("category", searchParams.category);
   }
+
   if (searchParams.color) {
     params.set("color", searchParams.color);
   }
-  if (searchParams.size) {
+
+  if (searchParams.sizes) {
     params.set("size", searchParams.size);
   }
 
-  if (searchParams.price) {
-    params.set("price", searchParams.brand);
-  }
-
-  return params.toString();
-};
-
-export const getAllProducts = async (searchParams: any) => {
-  const productsResp = await fetch(
-    `http://localhost:5000/api/products?${filterHandler(searchParams)}`
+  const response = await fetch(
+    `http://localhost:5000/api/products?${params.toString()}`
   );
-  const productsData = await productsResp.json();
-
-  return productsData;
+  const data = await response.json();
+  return data;
 };

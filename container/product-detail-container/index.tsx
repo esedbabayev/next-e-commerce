@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Components
-import ProductDetails from '@/components/ProductDetailPage/productDetail'
+import ProductDetails from '@/components/ProductDetailPage/productsDetails'
 import Reviews from '@/components/ProductDetailPage/reviews'
 import NewArrivals from '@/components/Home/newArrivals'
 

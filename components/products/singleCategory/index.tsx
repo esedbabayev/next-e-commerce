@@ -1,10 +1,10 @@
 import React from "react";
 import Link from "next/link";
 
-const SingleCategory = ({ category }: any) => {
+const SingleCategory = ({ goToRoute, item }: any) => {
   return (
-    <li className={` flex  flex-col  justify-between items-baseline`}>
-      <Link href={`/products?category=${category.name}`}>{category.name}</Link>
+    <li onClick={() => goToRoute(item)} className={` flex  flex-col  justify-between items-baseline`}>
+      <Link href={`/products?category=${item.name}`}>{item.name}</Link>
     </li>
   );
 };

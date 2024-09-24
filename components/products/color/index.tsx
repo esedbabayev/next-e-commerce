@@ -7,7 +7,7 @@ const SingleColor = ({color}) => {
     <div>
     
     <li style={{
-      backgroundColor: `#${color.name}`
+      backgroundColor: `#${color?.name}`
     }} className={"h-9 w-9 p-2 relative rounded-full border border-x-2 border-[#00C12B] bg-green-600  flex items-center justify-center"}>
      
      <button >

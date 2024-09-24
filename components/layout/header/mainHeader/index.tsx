@@ -21,7 +21,7 @@ const MainHeader = () => {
      
      <div className='flex gap-3 items-baseline' >
      <Image src={menu} width={24} height={24} alt='menu' className='block lg:hidden '/>
-     <h1 className='text-[32px] font-bold font-integral'>SHOP.CO</h1>
+     <Link href="/"><h1 className='text-[32px] font-bold font-integral'>SHOP.CO</h1></Link>
      </div>
 
    
@@ -32,8 +32,8 @@ const MainHeader = () => {
            <Image src={arrowIcon} width={20} height={20} alt='arrowIcon'/>
            </li>
          <li>On Sale</li>
-         <li>New Arrivals</li>
-         <li>Brands</li>
+         <Link href="/new-arrivals-all"><li>New Arrivals</li></Link>
+         <Link href="/products"><li>Brands</li></Link>
        </ul>
      </div>
 

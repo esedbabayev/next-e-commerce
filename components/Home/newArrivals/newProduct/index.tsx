@@ -7,6 +7,7 @@ import tshirt from "@/assets/home/Frame 32.png";
 // Review
 import { Rate } from "antd";
 import { IProduct } from "@/types/product";
+import Link from "next/link";
 
 interface IProps {
   newArrival: IProduct;
@@ -22,6 +23,7 @@ const NewProduct = ({ newArrival }: IProps) => {
 const discountedPrice = newArrival?.price - discountPrice || newArrival?.price;
 
   return (
+    <Link href={`/products/${newArrival._id}`}>
     <div className="mb-[10px]  h-[500px]">
       <div className="w-[300px]">
         <Image
@@ -71,6 +73,7 @@ const discountedPrice = newArrival?.price - discountPrice || newArrival?.price;
         )}
       </div>
     </div>
+    </Link>
   );
 };
 
